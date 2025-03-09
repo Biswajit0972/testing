@@ -18,7 +18,7 @@ const myToken =  jwt.sign({text:"hello world"}, "1245774nbnvfyfdsdfsdf", {
 
 const cookieOptions  = {
     httpOnly: true,
-    secure: false,
+    secure: true,
     maxAge: 1000 * 60 * 60 *7,
     sameSite: "none"
 }
