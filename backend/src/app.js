@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({extended: true, limit: "64kb"}));
 app.use(cors({
-    origin:  "http://localhost:5500",
+    origin:  "https://testing-frontend-sepia.vercel.app",
     credentials: true,
 }));
 
