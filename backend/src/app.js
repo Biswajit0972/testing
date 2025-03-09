@@ -20,7 +20,7 @@ const cookieOptions  = {
     httpOnly: true,
     secure: false,
     maxAge: 1000 * 60 * 60 *7,
-    sameSite: "Lax"
+    sameSite: "none"
 }
 
 app.get("/", (req, res) => {
