@@ -20,7 +20,8 @@ const cookieOptions  = {
     httpOnly: true,
     secure: true,
     maxAge: 1000 * 60 * 60 *7,
-    sameSite: "strict"
+    sameSite: "Lax",
+    domain:  "https://testing-backend-rust.vercel.app"
 }
 
 app.get("/", (req, res) => {
