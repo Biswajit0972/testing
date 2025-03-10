@@ -17,12 +17,13 @@ const myToken =  jwt.sign({text:"hello world"}, "1245774nbnvfyfdsdfsdf", {
 });
 
 const cookieOptions  = {
-    httpOnly: true,
-    secure: true,
-    maxAge: 1000 * 60 * 60 *7,
-    sameSite: "Lax",
-    domain:  "https://testing-backend-rust.vercel.app"
-}
+    httpOnly: true,  
+    secure: true,   
+    maxAge: 1000 * 60 * 60 * 7,  
+    sameSite: "None",  // ✅ Required for cross-site authentication
+    domain: "testing-backend-rust.vercel.app", // ✅ Remove "https://"
+};
+
 
 app.get("/", (req, res) => {
       res.status(200).cookie("myToken", myToken, cookieOptions).send("<h1>Hello from backend</h1>")
